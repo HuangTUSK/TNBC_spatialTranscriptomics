@@ -168,8 +168,6 @@ ggplot(df_new2, aes(fill=celltype, y=Fraction, x=DSPID)) +
 
 #dev.off()
 
-
-
 ##############compare among subtypes 
 
 head(mergecyber)
@@ -179,7 +177,6 @@ subtypeMerge$Genefu <- subtypeMerge$subtype.x
 subtypeMerge$TNBCtype <- subtypeMerge$subtype.y
 colnames(subtypeMerge)
 subtype <- subtypeMerge[,c(1,19,20,21,22,23,31,32)]
-
 
 allmerge <- merge(subtype, mergecyber, by.x= "SegmentDisplayName", by.y = "SegmentDisplayName")
 
@@ -255,47 +252,4 @@ p1<-ggplot(data = df_new, aes(x=cellType, y=Fraction)) +
 p1 
 p1 + stat_compare_means(aes(group = Genefu),method="anova", label = "p.signif",
                         label.y = 0.38, size =6, hide.ns = TRUE) + ggtitle("")
-
-
-
-####################subtype comparison
-colnames(allmerge)
-p1<-ggplot(data = allmerge, aes(x=TNBCtype, y=TumorSize)) +
-  geom_boxplot(aes(fill=TNBCtype), outlier.size = 0.1) +
-  ylim(0,8) +
-  labs(fill = "") +
-  # ylab("Expression (log10)") +
-  ylab("Tumor size")+
-  theme_bw() +
-  #eliminates background, gridlines, and chart border
-  theme(
-    plot.background = element_blank(),
-    panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank(),
-    panel.border = element_blank()
-  ) +
-  scale_fill_manual(
-    #labels = c(expression(IFNGR1^High),expression(IFNGR1^Low)),
-    values = c("#e64b35", "#4dbbd5","#00a087", "#3c5488", "#f39b7f","wheat4","hotpink3","slategray4")) +
-  #draws x and y axis line
-  theme(axis.line = element_line(color = 'black')) +
-  theme(axis.text.y = element_text(size=15, color = "black"),
-        axis.text.x = element_text(size=14, color = "black", angle = 45, hjust=1),
-        # axis.text.x = element_text(size=15, color = "black"), axis.title = element_text(size=22),
-        axis.title.x = element_blank(),
-        axis.title.y = element_text(size=16),
-        plot.title = element_text(size = 27, hjust = 0.5),
-        legend.text = element_text(size=14),
-        legend.title = element_blank(),
-        #legend.title = element_text(size=13),
-        #legend.position = c(0.9,0.7)
-  ) #c(0.9,0.8)
-p1 
-p1 + stat_compare_means(aes(group = TNBCtype),method="anova", label = "p.signif",
-                        label.x = 0.5, label.y = 7.5, size =8, hide.ns = TRUE) + ggtitle("")
-
-
-
-
-
 
