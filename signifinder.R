@@ -1,34 +1,35 @@
 
 library(signifinder)
-mtx <- read.table("TPMnormalized.txt", sep = "\t", header = T)
+mtx <- read.table("./Data/TPMnormalized.txt", sep = "\t", header = T)
 head(mtx)
 rownames(mtx) <- mtx$X
 mtx$X <- NULL
 
 res <- ICBResponseSign(mtx, nametype = "SYMBOL", whichAssay = "norm_expr")
-
-res@colData
-
 ov_res <- consensusOVSign(mtx, nametype = "SYMBOL", whichAssay = "norm_expr")
 ov_res@colData
 df1 <- data.frame(ov_res@colData)
 correlationSignPlot(ov_res)
 df1$Sample <- rownames(df1)
 
-
-#########heatmap
-tdf <- t(data.frame(ov_res@colData))
-pheatmap(tdf,
-         col=colors,
-         show_colnames=F)
-
-colnames(tdf) <- gsub("\\.", "", colnames(tdf))
+######meta data
+TNBC <- read.table("./Deseq2/samplelist.txt", sep = "\t" , header = T)
+TNBC$AOI <- gsub("\\..*", "", TNBC$AOI)
+TNBC$Label <- gsub("\\_.*", "", TNBC$Label)
 
 
-metadf <- df ## df from spatial Deseq2 
-#metadf <- allsub_merged
-#metadf <- df ## df from spatial Deseq2 
+TNBC$merge <- paste(TNBC$TNBCtype, TNBC$X, sep="_")
+all <- read.table("./TNBCmetaData.txt", sep = "\t", header = T) 
+head(all)
+all$AOISurfaceArea <- gsub("\\..*", "", all$AOISurfaceArea)
+sel <- all[,c("SegmentDisplayName","AOISurfaceArea")]
 
+mergedDF <- merge(sel, TNBC, by.x = "AOISurfaceArea", by.y = "AOI")
+mergedDF$TumorType <- gsub("-","_", mergedDF$TumorType)
+mergedDF$TumorType <- gsub("\\+","_P", mergedDF$TumorType)
+rownames(mergedDF) <- mergedDF$SegmentDisplayName
+
+metadf <- mergedDF[,c("MetType","Label","P53","X","type")]
 #rownames(metadf) <- gsub("\\|","", rownames(metadf))
 #rownames(metadf) <- gsub(" ","", rownames(metadf))
 rownames(metadf) <- metadf$segment
@@ -40,28 +41,8 @@ rownames(metadf) <- gsub(" ","", rownames(metadf))
 #df <- df[order(df$X),]
 
 metadf <- metadf[metadf$type=="Tumor",]
-#tdf2 <- tdf[,rownames(metadf2)]
 tdf2 <- tdf[,rownames(metadf)]
 
-ann_col = list(
-  Label = c(P1="black", P10="grey",
-            P2="red",P3="yellow",
-            P4="green",P5="blue",
-            P6="pink",P7="sienna",
-            P8="magenta",P9="orange",
-            P11="royalblue",P12="olivedrab",
-            P13="khaki",P14="palegreen2",
-            P15="orchid",P16="tan",
-            P17="cadetblue2",P18="cornsilk",
-            P19="hotpink2",P20="gold2"))
-
-pheatmap(tdf2, cluster_rows=T, show_rownames=T,
-         show_colnames=FALSE, cluster_cols=T, fontsize_row = 8,
-         annotation_col=metadf, ##
-         annotation_colors = ann_col)
-
-
-#
 CIN_res <- CINSign(dataset = mtx, inputType = "rnaseq",nametype = "SYMBOL", whichAssay = "norm_expr")
 CIN_res@colData
 
@@ -325,7 +306,6 @@ ggplot(cor_melted, aes(Var1, Var2, fill = value)) +
   labs(title = "Correlation Heatmap", x = "Variables", y = "Variables") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-
 ###heatmap 
 label_matrix <- cor_matrix*100
 pheatmap(
@@ -342,96 +322,6 @@ pheatmap(
  #display_numbers = label_matrix, fontsize_number=6,
 )
 
-
-###############boxplot compare
-sigMatx <- matx
-sigMatx$sample <- rownames(sigMatx)
-colnames(sigMatx)
-sigMatx$sample <- gsub("\\.", "", sigMatx$sample)
-
-metadf <- allsub_merged
-metadf <- metadf[metadf$type=="Tumor" & metadf$Tissue=="breast",] ##LN
-metadf2 <- metadf[,c("segment","TNBCtype.x","Label","X","Tissue")] ###SpatialType
-
-metadf2$T_Stype <- paste(metadf2$TNBCtype,metadf2$X, sep = "_")
-merge_sigMatx <- merge(metadf2,sigMatx, by.x="segment",by.y="segment")
-colnames(merge_sigMatx)
-merge_sigMatx$T_Stype
-resDF<-data.frame()
-for (column in colnames(merge_sigMatx)[c(8:42)]) {  ###7:32
-  resDF<-rbind (
-    resDF,
-    data.frame(Signature=column,
-               # tst <- aov(tmtx_merge[,column] ~ tmtx_merge[,61]),
-               pvalue=summary(aov(merge_sigMatx[,column] ~ merge_sigMatx[,4]))[[1]][["Pr(>F)"]][1],
-               #  pvalue=wilcox.test(tmtx_merge[tmtx_merge$X=="Inflamed",][,column], 
-               #                     tmtx_merge[tmtx_merge$X=="Ignored",][,column])$p.value,
-               Excluded_mean= mean(merge_sigMatx[merge_sigMatx$SpatialType=="Excluded",][,column], na.rm=TRUE),
-               Ignored_mean= mean(merge_sigMatx[merge_sigMatx$SpatialType=="Ignored",][,column], na.rm=TRUE),
-               Inflamed_mean= mean(merge_sigMatx[merge_sigMatx$SpatialType=="Inflamed",][,column], na.rm=TRUE)
-    )
-  )
-}
-
-resDF
-sig <- resDF[resDF$pvalue<0.05,]
-#write.table(resDF, "Anova_spatialtypeDEG.txt", sep = "\t", quote = F, row.names = F)
-###plot the markers 
-
-library(ggsignif)
-library(ggplot2)
-library(tidyverse)
-library(ggpubr)
-
-##include significant ones 
-merge_sigMatx$Hypoxia_Buffa
-#nonlst <- c("Autophagy_Xu",'CellCycle_Davoli',"Glycolysis_Zhang","ImmuneCyt_Davoli",
-#            "IPS_Charoentong","IPS_Charoentong_SC","LipidMetabolism_Zheng","Hypoxia_Buffa")
-#merge_sigMatx <- merge_sigMatx[,!names(merge_sigMatx) %in% nonlst]
-colnames(merge_sigMatx)
-sig$Signature
-sub2 <- merge_sigMatx[,c(1:6,25,15,18)] #32,33,24 ##immune 25,26,28,31 ##chromosomeSig8,9,12,13
-
-colnames(sub2)
-##
-df_new <- tidyr::gather(sub2,key='signature',value='val',7:9)
-p1<-ggplot(data = df_new, aes(x=signature, y=val)) +
-  geom_boxplot(aes(fill=T_Stype), outlier.size = 0.1) +
-  ylim(-1.5,1) +
-  labs(fill = "") +
-  # ylab("Expression (log10)") +
-  ylab("Signature score")+
-  theme_bw() +
-  #eliminates background, gridlines, and chart border
-  theme(
-    plot.background = element_blank(),
-    panel.grid.major = element_blank(),
-    panel.grid.minor = element_blank(),
-    panel.border = element_blank()
-  ) +
-  scale_fill_manual(
-    #labels = c(expression(IFNGR1^High),expression(IFNGR1^Low)),
-    values = c("#e64b35", "#4dbbd5","#00a087", "#3c5488", "#f39b7f",
-               "wheat4","hotpink3","slategray4","royalblue",
-               "olivedrab","khaki","palegreen2")) +
-  #draws x and y axis line
-  theme(axis.line = element_line(color = 'black')) +
-  theme(axis.text.y = element_text(size=15, color = "black"),
-        axis.text.x = element_text(size=13, color = "black"), #angle = 45, hjust=1
-        # axis.text.x = element_text(size=15, color = "black"), axis.title = element_text(size=22),
-        axis.title.x = element_blank(),plot.title = element_text(size = 27, hjust = 0.5),
-        legend.text = element_text(size=13),
-        legend.title = element_blank(),
-        #legend.title = element_text(size=13),
-        #legend.position = c(0.9,0.7)
-  ) #c(0.9,0.8)
-p1 
-
-pdf("./Figures/Spatial_phenotype_IPSSig.pdf", width = 10, height =5)
-p1 + stat_compare_means(aes(group = T_Stype),method="anova", label = "p.signif",label.y = 0.8, ##immune 2.5, chr16
-                        size =9, hide.ns = TRUE) + ggtitle("")
-
-dev.off()
 
 #####heatmap
 nonlst <- c("ImmunoScore_Hao", "ECM_Chakravarthy_up","ECM_Chakravarthy_down",
@@ -503,141 +393,5 @@ pheatmap(Lmatx2, cluster_rows=T, show_rownames=T,
          annotation_col=metadf2,
          annotation_colors = ann_col)
 
-###subtype info
-subty <- read.table("Tumor_subtype_immunecellFraction.txt", sep = "\t", header = T)
-head(subty)
-colnames(subty)
-subty <- subty[,c(1,7,8,10)]
-rownames(subty) <- subty$SegmentDisplayName
-colnames(subty)
-head(mergedDF)
-
-subtype_merge <- merge(subty, mergedDF, by.x="SegmentDisplayName", by.y="SegmentDisplayName")
-rownames(subtype_merge) <- subtype_merge$SegmentDisplayName
 
 
-##merge with other subtype 
-sigDF <- data.frame(ov_res@colData)
-
-sigDF$Max_Column <- apply(sigDF, 1, function(row) colnames(sigDF)[which.max(row)])
-
-sigDF$segment <- rownames(sigDF)
-sigDF$segment <- gsub("\\.", "", sigDF$segment)
-
-colnames(subtype_merge)
-
-allsub_merged <- merge(sigDF,subtype_merge, by.x="segment", by.y="SegmentDisplayName")
-
-######plot 
-frequency_table <- table(allsub_merged$Max_Column, allsub_merged$SpatialType)
-print(frequency_table)
-
-#type <- c("BL1","BL2","IM","LAR","M","MSL","UNS")
-type <- c("ConsensusOV_Chen_DIF","ConsensusOV_Chen_IMR","ConsensusOV_Chen_PRO","ConsensusOV_Chen_MES")
-Excluded <- c(34,3,0,0)
-Ignored <- c(9,0,1,0)
-Inflamed <- c(3,5,1,0)
-mydata <- data.frame(type, Excluded, Ignored,Inflamed)
-library(tidyverse)
-mydata %>% pivot_longer(cols = !type, names_to = "ConsensusOVtype", values_to = "Frequencies") %>% 
-  ggplot(aes(fill = ConsensusOVtype, x = type, y = Frequencies)) + 
-  geom_bar(position = "stack", stat = "identity") + 
-  xlab("") +
-  theme(axis.title = element_text(size = 14), 
-        axis.text.y = element_text(size = 12),
-        axis.text.x = element_text(size = 12,angle = 45,hjust = 1)) +
-  scale_color_manual(values = c("tan","cadetblue2","#3c5488","pink3"))
-
-###
-frequency_table <- table(allsub_merged$TNBCtype, allsub_merged$Max_Column)
-print(frequency_table)
-type <- c("BL1","BL2","IM","LAR","M","MSL","UNS")
-Excluded <- c(8,4,4,11,1,7,11)
-Ignored <- c(0,0,4,0,0,1,3)
-Inflamed <- c(0,0,0,1,0,0,1)
-mydata <- data.frame(type, Excluded, Ignored,Inflamed)
-library(tidyverse)
-mydata %>% pivot_longer(cols = !type, names_to = "SpatialType", values_to = "Frequencies") %>% 
-  ggplot(aes(fill = SpatialType, x = type, y = Frequencies)) + 
-  geom_bar(position = "stack", stat = "identity") + 
-  xlab("") +
-  theme(axis.title = element_text(size = 14), 
-        axis.text = element_text(size = 12)) +
-  scale_color_manual(values = c("tan","cadetblue2","#3c5488"))
-
-par(mfrow=c(1, 1), mar=c(5, 5, 4, 4))                                
-barplot(frequency_table, 
-        col=colors()[c(23,89,12,50,7,3,40)] , 
-        border="white", 
-        space=0.04, 
-        font.axis=2, 
-        xlab="",
-        legend.text = TRUE,
-        args.legend = list(x = "topright", bty = "n", inset=c(-0.15, 0)))
-
-#########
-frequency_table <- table(allsub_merged$SpatialType, allsub_merged$TNBCtype)
-print(frequency_table)
-
-#########workflow plot alluvial plot
-TNBC <- read.table("TNBCalllist.txt", sep = "\t" , header = T)
-head(TNBC)
-
-lst <- read_tsv("./TNBCsample.txt") %>% as.data.frame()
-head(lst)
-nrow(lst)
-lst$area <- gsub("\\..*", "", lst$area)
-lst <- lst[lst$Sample_ID %in% TNBC$DSPID,]
-
-all <- read.table("./TNBCmetaData.txt", sep = "\t", header = T) 
-head(all)
-all$SegmentDisplayName <- gsub("\\|","",all$SegmentDisplayName)
-all$SegmentDisplayName <- gsub(" ","",all$SegmentDisplayName)
-
-all_merge <- merge(all, allsub_merged,by.x="SegmentDisplayName",by.y="segment")
-all_merge$AOISurfaceArea <- gsub("\\..*", "", all_merge$AOISurfaceArea)
-
-sampleAnnoFile <- all_merge[all_merge$AOISurfaceArea %in% lst$area,]
-
-head(sampleAnnoFile)
-nrow(sampleAnnoFile)
-sampleAnnoFile$SegmentDisplayName
-
-###count 
-countFile <- read_tsv("allCount.txt") %>% as.data.frame()
-head(countFile)
-colnames(countFile) <- gsub("\\|","",colnames(countFile))
-colnames(countFile) <- gsub(" ","",colnames(countFile))
-
-countFile2 <- countFile[, sampleAnnoFile$SegmentDisplayName]
-countFile2$TargetName <- countFile$TargetName
-
-###featureAnnoFile
-gne <- read.table("/Users/emmahuang/Downloads/Bedi_project/gene.txt", sep = "\t", header = T)
-head(gne)
-gsub("\\,.*","",gne$location)
-gne$start <- as.numeric(sub(".*:(.*)-.*", "\\1", gne$location))
-gne$end <- as.numeric(sub(".*-", "", gne$location))
-
-gne$GeneLength <- gne$end - gne$start
-nrow(gne)
-featureAnnoFile <- read_tsv("GeneMeta.txt") %>% as.data.frame()
-head(featureAnnoFile)
-nrow(featureAnnoFile)
-head(sampleAnnoFile)
-head(countFile2)
-
-##
-library(ggalluvial)
-spe <- readGeoMx(countFile2, sampleAnnoFile, featureAnnoFile,colnames.as.rownames = c("TargetName", "SegmentDisplayName", "TargetName"))
-spe@colData$CD8Tcell
-
-standR::plotSampleInfo(spe, column2plot = c("Label","Max_Column","SpatialType")) ##,"Tissue","SpatialType","TNBCtype"
-?plotSampleInfo
-
-
-###outcome compare 
-colnames(allsub_merged)
-
-allsub_merged$MetType
-write.table(allsub_merged,"./TNBCtype/allsubtype.txt", sep = "\t", quote = F,row.names = F)
