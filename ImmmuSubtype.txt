@@ -1,0 +1,113 @@
+SegmentDisplayName	type	Patient	Tissue	MetType	Survival	TumorType	Label	M2	X	CD8Tcell
+TMA Slide 1 | 002 | Segment 1	Tumor	Slide1_Patient1	breast	Primary1	DEAD (9 MONTHS)	tnbc	P1	low	Excluded	Low
+TMA Slide 1 | 002 | Segment 2	Stroma	Slide1_Patient1	breast	Primary1	DEAD (9 MONTHS)	tnbc	P1	low	Excluded	High
+TMA Slide 1 | 003 | Segment 1	Tumor	Slide1_Patient2	breast	Primary2	ALIVE (82 MONTHS)	tnbc	P2	low	Excluded	Low
+TMA Slide 1 | 003 | Segment 2	Stroma	Slide1_Patient2	breast	Primary2	ALIVE (82 MONTHS)	tnbc	P2	low	Excluded	High
+TMA Slide 1 | 004 | Segment 1	Tumor	Slide1_Patient2	breast	Primary2.1	ALIVE (82 MONTHS)	tnbc	P2	high	Excluded	Low
+TMA Slide 1 | 004 | Segment 2	Stroma	Slide1_Patient2	breast	Primary2.1	ALIVE (82 MONTHS)	tnbc	P2	high	Excluded	High
+TMA Slide 1 | 005 | Segment 1	Tumor	Slide1_Patient3	breast	Primary3	ALIVE (81 MONTHS)	tnbc	P3	high	Excluded	Low
+TMA Slide 1 | 005 | Segment 2	Stroma	Slide1_Patient3	breast	Primary3	ALIVE (81 MONTHS)	tnbc	P3	high	Excluded	High
+TMA Slide 1 | 006 | Segment 1	Tumor	Slide1_Patient3	breast	Primary3.1	ALIVE (81 MONTHS)	tnbc	P3	low	Inflamed	High
+TMA Slide 1 | 006 | Segment 2	Stroma	Slide1_Patient3	breast	Primary3.1	ALIVE (81 MONTHS)	tnbc	P3	low	Inflamed	High
+TMA Slide 1 | 007 | Segment 1	Tumor	Slide1_Patient4	breast	Primary4	DEAD (9 MONTHS)	er_pr_her_P	P4	low	Inflamed	High
+TMA Slide 1 | 007 | Segment 2	Stroma	Slide1_Patient4	breast	Primary4	DEAD (9 MONTHS)	er_pr_her_P	P4	low	Inflamed	High
+TMA Slide 1 | 008 | Segment 1	Tumor	Slide1_Patient4	breast	Primary4.1	DEAD (9 MONTHS)	er_pr_her_P	P4	high	Inflamed	High
+TMA Slide 1 | 008 | Segment 2	Stroma	Slide1_Patient4	breast	Primary4.1	DEAD (9 MONTHS)	er_pr_her_P	P4	high	Inflamed	High
+TMA Slide 1 | 009 | Segment 1	Tumor	Slide1_Patient5	breast	Primary5	ALIVE(78 MONTHS)	er_pr_her_P	P5	high	Inflamed	High
+TMA Slide 1 | 009 | Segment 2	Stroma	Slide1_Patient5	breast	Primary5	ALIVE(78 MONTHS)	er_pr_her_P	P5	high	Inflamed	High
+TMA Slide 1 | 010 | Segment 1	Tumor	Slide1_Patient5	breast	Primary5.1	ALIVE(78 MONTHS)	er_pr_her_P	P5	low	Inflamed	High
+TMA Slide 1 | 010 | Segment 2	Stroma	Slide1_Patient5	breast	Primary5.1	ALIVE(78 MONTHS)	er_pr_her_P	P5	low	Inflamed	High
+TMA Slide 1 | 011 | Segment 1	Tumor	Slide1_Patient6	breast	Primary6	ALIVE(75 MONTHS)	tnbc	P6	high	Excluded	Low
+TMA Slide 1 | 011 | Segment 2	Stroma	Slide1_Patient6	breast	Primary6	ALIVE(75 MONTHS)	tnbc	P6	high	Excluded	High
+TMA Slide 1 | 012 | Segment 1	Tumor	Slide1_Patient6	breast	Primary6.1	ALIVE(75 MONTHS)	tnbc	P6	high	Excluded	Low
+TMA Slide 1 | 012 | Segment 2	Stroma	Slide1_Patient6	breast	Primary6.1	ALIVE(75 MONTHS)	tnbc	P6	high	Excluded	High
+TMA Slide 1 | 013 | Segment 1	Tumor	Slide1_Patient7	breast	Primary7	ALIVE(73 MONTHS)	tnbc	P7	low	Excluded	Low
+TMA Slide 1 | 013 | Segment 2	Stroma	Slide1_Patient7	breast	Primary7	ALIVE(73 MONTHS)	tnbc	P7	low	Excluded	High
+TMA Slide 1 | 014 | Segment 1	Tumor	Slide1_Patient7	breast	Primary7.1	ALIVE(73 MONTHS)	tnbc	P7	high	Excluded	Low
+TMA Slide 1 | 014 | Segment 2	Stroma	Slide1_Patient7	breast	Primary7.1	ALIVE(73 MONTHS)	tnbc	P7	high	Excluded	High
+TMA Slide 1 | 015 | Segment 1	Tumor	Slide1_Patient7	breast	Primary7.2	ALIVE(73 MONTHS)	tnbc	P7	high	Excluded	Low
+TMA Slide 1 | 015 | Segment 2	Stroma	Slide1_Patient7	breast	Primary7.2	ALIVE(73 MONTHS)	tnbc	P7	high	Excluded	High
+TMA Slide 1 | 016 | Segment 1	Tumor	Slide1_Patient8	breast	Primary8	ALIVE(72 MONTHS)	er_pr_her_P	P8	high	Excluded	Low
+TMA Slide 1 | 016 | Segment 2	Stroma	Slide1_Patient8	breast	Primary8	ALIVE(72 MONTHS)	er_pr_her_P	P8	high	Excluded	High
+TMA Slide 1 | 017 | Segment 1	Tumor	Slide1_Patient8	breast	Primary8.1	ALIVE(72 MONTHS)	er_pr_her_P	P8	high	Excluded	Low
+TMA Slide 1 | 017 | Segment 2	Stroma	Slide1_Patient8	breast	Primary8.1	ALIVE(72 MONTHS)	er_pr_her_P	P8	high	Excluded	High
+TMA Slide 1 | 018 | Segment 1	Tumor	Slide1_Patient9	breast	Primary 9	ALIVE(72 MONTHS)	er_pr_her_P	P9	high	Inflamed	High
+TMA Slide 1 | 018 | Segment 2	Stroma	Slide1_Patient9	breast	Primary 9	ALIVE(72 MONTHS)	er_pr_her_P	P9	high	Inflamed	High
+TMA Slide 1 | 019 | Segment 1	Tumor	Slide1_Patient9	breast	Primary9.1	ALIVE(72 MONTHS)	er_pr_her_P	P9	high	Excluded	Low
+TMA Slide 1 | 019 | Segment 2	Stroma	Slide1_Patient9	breast	Primary9.1	ALIVE(72 MONTHS)	er_pr_her_P	P9	high	Excluded	High
+TMA Slide 1 | 020 | Segment 1	Tumor	Slide1_Patient10	breast	Primary10	DEAD(33 MONTHS)	tnbc	P10	low	Inflamed	High
+TMA Slide 1 | 020 | Segment 2	Stroma	Slide1_Patient10	breast	Primary10	DEAD(33 MONTHS)	tnbc	P10	low	Inflamed	High
+TMA Slide 1 | 021 | Segment 1	Tumor	Slide1_Patient10	breast	Primary10.1	DEAD(33 MONTHS)	tnbc	P10	low	Excluded	Low
+TMA Slide 1 | 021 | Segment 2	Stroma	Slide1_Patient10	breast	Primary10.1	DEAD(33 MONTHS)	tnbc	P10	low	Excluded	High
+TMA Slide 1 | 022 | Segment 1	Tumor	Slide1_Patient1	LN	LN1	DEAD (9 MONTHS)	tnbc	P1	low	Excluded	Low
+TMA Slide 1 | 022 | Segment 2	Stroma	Slide1_Patient1	LN	LN1	DEAD (9 MONTHS)	tnbc	P1	low	Excluded	High
+TMA Slide 1 | 023 | Segment 1	Tumor	Slide1_Patient1	LN	LN1.1	DEAD (9 MONTHS)	tnbc	P1	high	Excluded	Low
+TMA Slide 1 | 023 | Segment 2	Stroma	Slide1_Patient1	LN	LN1.1	DEAD (9 MONTHS)	tnbc	P1	high	Excluded	High
+TMA Slide 1 | 024 | Segment 1	Tumor	Slide1_Patient2	LN	LN2	ALIVE (82 MONTHS)	tnbc	P2	low	Ignored	Low
+TMA Slide 1 | 024 | Segment 2	Stroma	Slide1_Patient2	LN	LN2	ALIVE (82 MONTHS)	tnbc	P2	low	Ignored	Low
+TMA Slide 1 | 025 | Segment 1	Tumor	Slide1_Patient2	LN	LN2.1	ALIVE (82 MONTHS)	tnbc	P2	low	Excluded	Low
+TMA Slide 1 | 025 | Segment 2	Stroma	Slide1_Patient2	LN	LN2.1	ALIVE (82 MONTHS)	tnbc	P2	low	Excluded	High
+TMA Slide 1 | 026 | Segment 1	Tumor	Slide1_Patient3	LN	LN3	ALIVE (82 MONTHS)	tnbc	P3	low	Excluded	Low
+TMA Slide 1 | 026 | Segment 2	Stroma	Slide1_Patient3	LN	LN3	ALIVE (82 MONTHS)	tnbc	P3	low	Excluded	High
+TMA Slide 1 | 027 | Segment 1	Tumor	Slide1_Patient3	LN	LN3.1	ALIVE (82 MONTHS)	tnbc	P3	low	Inflamed	High
+TMA Slide 1 | 027 | Segment 2	Stroma	Slide1_Patient3	LN	LN3.1	ALIVE (82 MONTHS)	tnbc	P3	low	Inflamed	High
+TMA Slide 1 | 028 | Segment 1	Tumor	Slide1_Patient4	LN	LN4	DEAD (9 MONTHS)	er_pr_her_P	P4	low	Excluded	Low
+TMA Slide 1 | 028 | Segment 2	Stroma	Slide1_Patient4	LN	LN4	DEAD (9 MONTHS)	er_pr_her_P	P4	low	Excluded	High
+TMA Slide 1 | 029 | Segment 1	Tumor	Slide1_Patient4	LN	LN4.1	DEAD (9 MONTHS)	er_pr_her_P	P4	low	Excluded	Low
+TMA Slide 1 | 029 | Segment 2	Stroma	Slide1_Patient4	LN	LN4.1	DEAD (9 MONTHS)	er_pr_her_P	P4	low	Excluded	High
+TMA Slide 1 | 030 | Segment 1	Tumor	Slide1_Patient5	LN	LN5	ALIVE(78 MONTHS)	er_pr_her_P	P5	high	Excluded	Low
+TMA Slide 1 | 030 | Segment 2	Stroma	Slide1_Patient5	LN	LN5	ALIVE(78 MONTHS)	er_pr_her_P	P5	high	Excluded	High
+TMA Slide 1 | 031 | Segment 1	Tumor	Slide1_Patient5	LN	LN5.1	ALIVE(78 MONTHS)	er_pr_her_P	P5	high	Excluded	Low
+TMA Slide 1 | 031 | Segment 2	Stroma	Slide1_Patient5	LN	LN5.1	ALIVE(78 MONTHS)	er_pr_her_P	P5	high	Excluded	High
+TMA Slide 1 | 032 | Segment 1	Tumor	Slide1_Patient6	LN	LN6	ALIVE(75 MONTHS)	tnbc	P6	high	Excluded	Low
+TMA Slide 1 | 032 | Segment 2	Stroma	Slide1_Patient6	LN	LN6	ALIVE(75 MONTHS)	tnbc	P6	high	Excluded	High
+TMA Slide 1 | 033 | Segment 1	Tumor	Slide1_Patient6	LN	LN6.1	ALIVE(75 MONTHS)	tnbc	P6	high	Excluded	Low
+TMA Slide 1 | 033 | Segment 2	Stroma	Slide1_Patient6	LN	LN6.1	ALIVE(75 MONTHS)	tnbc	P6	high	Excluded	High
+TMA Slide 1 | 034 | Segment 1	Tumor	Slide1_Patient7	LN	LN7	ALIVE(73 MONTHS)	tnbc	P7	low	Ignored	Low
+TMA Slide 1 | 034 | Segment 2	Stroma	Slide1_Patient7	LN	LN7	ALIVE(73 MONTHS)	tnbc	P7	low	Ignored	Low
+TMA Slide 1 | 035 | Segment 1	Tumor	Slide1_Patient7	LN	LN7	ALIVE(73 MONTHS)	tnbc	P7	low	Ignored	Low
+TMA Slide 1 | 035 | Segment 2	Stroma	Slide1_Patient7	LN	LN7	ALIVE(73 MONTHS)	tnbc	P7	low	Ignored	Low
+TMA Slide 1 | 036 | Segment 1	Tumor	Slide1_Patient8	LN	LN8	ALIVE(72 MONTHS)	er_pr_her_P	P8	high	Ignored	Low
+TMA Slide 1 | 036 | Segment 2	Stroma	Slide1_Patient8	LN	LN8	ALIVE(72 MONTHS)	er_pr_her_P	P8	high	Ignored	Low
+TMA Slide 1 | 037 | Segment 1	Tumor	Slide1_Patient8	LN	LN8.1	ALIVE(72 MONTHS)	er_pr_her_P	P8	low	Excluded	Low
+TMA Slide 1 | 037 | Segment 2	Stroma	Slide1_Patient8	LN	LN8.1	ALIVE(72 MONTHS)	er_pr_her_P	P8	low	Excluded	High
+TMA Slide 1 | 038 | Segment 1	Tumor	Slide1_Patient9	LN	LN9	ALIVE(72 MONTHS)	er_pr_her_P	P9	high	Ignored	Low
+TMA Slide 1 | 038 | Segment 2	Stroma	Slide1_Patient9	LN	LN9	ALIVE(72 MONTHS)	er_pr_her_P	P9	high	Ignored	Low
+TMA Slide 1 | 039 | Segment 1	Tumor	Slide1_Patient10	LN	LN10	DEAD(33 MONTHS)	tnbc	P10	low	Excluded	Low
+TMA Slide 1 | 039 | Segment 2	Stroma	Slide1_Patient10	LN	LN10	DEAD(33 MONTHS)	tnbc	P10	low	Excluded	High
+TMA Slide 1 | 040 | Segment 1	Tumor	Slide1_Patient10	LN	LN10.1	DEAD(33 MONTHS)	tnbc	P10	high	Excluded	Low
+TMA Slide 1 | 040 | Segment 2	Stroma	Slide1_Patient10	LN	LN10.1	DEAD(33 MONTHS)	tnbc	P10	high	Excluded	High
+TMA Slide 2 | 009 | Segment 1	Tumor	Slide2_Patient5	breast	Nonmetas1	ALIVE (84 MONTHS)	tnbc	P11	high	Excluded	Low
+TMA Slide 2 | 009 | Segment 2	Stroma	Slide2_Patient5	breast	Nonmetas1	ALIVE (84 MONTHS)	tnbc	P11	high	Excluded	High
+TMA Slide 2 | 010 | Segment 1	Tumor	Slide2_Patient5	breast	Nonmetas1.1	ALIVE (84 MONTHS)	tnbc	P12	low	Excluded	Low
+TMA Slide 2 | 010 | Segment 2	Stroma	Slide2_Patient5	breast	Nonmetas1.1	ALIVE (84 MONTHS)	tnbc	P12	low	Excluded	High
+TMA Slide 2 | 015 | Segment 1	Tumor	Slide2_Patient8	breast	Nonmetas2	ALIVE (82 MONTHS)	tnbc	P13	low	Ignored	Low
+TMA Slide 2 | 015 | Segment 2	Stroma	Slide2_Patient8	breast	Nonmetas2	ALIVE (82 MONTHS)	tnbc	P13	low	Ignored	Low
+TMA Slide 2 | 016 | Segment 1	Tumor	Slide2_Patient8	breast	Nonmetas2.1	ALIVE (82 MONTHS)	tnbc	P13	low	Ignored	Low
+TMA Slide 2 | 016 | Segment 2	Stroma	Slide2_Patient8	breast	Nonmetas2.1	ALIVE (82 MONTHS)	tnbc	P13	low	Ignored	Low
+TMA Slide 2 | 017 | Segment 1	Tumor	Slide2_Patient9	breast	Primary11	ALIVE (82 MONTHS)	tnbc	P14	high	Excluded	Low
+TMA Slide 2 | 017 | Segment 2	Stroma	Slide2_Patient9	breast	Primary11	ALIVE (82 MONTHS)	tnbc	P14	high	Excluded	High
+TMA Slide 2 | 018 | Segment 1	Tumor	Slide2_Patient9	breast	Primary11.1	ALIVE (82 MONTHS)	tnbc	P14	high	Excluded	Low
+TMA Slide 2 | 018 | Segment 2	Stroma	Slide2_Patient9	breast	Primary11.1	ALIVE (82 MONTHS)	tnbc	P14	high	Excluded	High
+TMA Slide 2 | 019 | Segment 1	Tumor	Slide2_Patient10	breast	Nonmetas3	ALIVE (82 MONTHS)	tnbc	P15	high	Excluded	Low
+TMA Slide 2 | 019 | Segment 2	Stroma	Slide2_Patient10	breast	Nonmetas3	ALIVE (82 MONTHS)	tnbc	P15	high	Excluded	High
+TMA Slide 2 | 020 | Segment 1	Tumor	Slide2_Patient10	breast	Nonmetas3.1	ALIVE (82 MONTHS)	tnbc	P15	high	Excluded	Low
+TMA Slide 2 | 020 | Segment 2	Stroma	Slide2_Patient10	breast	Nonmetas3.1	ALIVE (82 MONTHS)	tnbc	P15	high	Excluded	High
+TMA Slide 2 | 024 | Segment 1	Tumor	Slide2_Patient13	breast	Nonmetas4	ALIVE (79 MONTHS)	tnbc	P16	low	Ignored	Low
+TMA Slide 2 | 024 | Segment 2	Stroma	Slide2_Patient13	breast	Nonmetas4	ALIVE (79 MONTHS)	tnbc	P16	low	Ignored	Low
+TMA Slide 2 | 025 | Segment 1	Tumor	Slide2_Patient13	breast	Nonmetas4.1	ALIVE (79 MONTHS)	tnbc	P16	high	Excluded	Low
+TMA Slide 2 | 025 | Segment 2	Stroma	Slide2_Patient13	breast	Nonmetas4.1	ALIVE (79 MONTHS)	tnbc	P16	high	Excluded	High
+TMA Slide 2 | 038 | Segment 1	Tumor	Slide2_Patient19	breast	Nonmetas5	ALIVE (77 MONTHS)	tnbc	P17	high	Excluded	Low
+TMA Slide 2 | 038 | Segment 2	Stroma	Slide2_Patient19	breast	Nonmetas5	ALIVE (77 MONTHS)	tnbc	P17	high	Excluded	High
+TMA Slide 2 | 039 | Segment 1	Tumor	Slide2_Patient20	breast	Primary12	ALIVE(77 MONTHS)	tnbc	P20	high	Excluded	Low
+TMA Slide 2 | 039 | Segment 2	Stroma	Slide2_Patient20	breast	Primary12	ALIVE(77 MONTHS)	tnbc	P20	high	Excluded	High
+TMA Slide 2 | 042 | Segment 1	Tumor	Slide2_Patient22	breast	Nonmetas6	ALIVE (77 MONTHS)	tnbc	P18	high	Excluded	Low
+TMA Slide 2 | 042 | Segment 2	Stroma	Slide2_Patient22	breast	Nonmetas6	ALIVE (77 MONTHS)	tnbc	P18	high	Excluded	High
+TMA Slide 2 | 043 | Segment 1	Tumor	Slide2_Patient22	breast	Nonmetas6.1	ALIVE (77 MONTHS)	tnbc	P18	low	Excluded	Low
+TMA Slide 2 | 043 | Segment 2	Stroma	Slide2_Patient22	breast	Nonmetas6.1	ALIVE (77 MONTHS)	tnbc	P18	low	Excluded	Low
+TMA Slide 2 | 055 | Segment 1	Tumor	Slide2_Patient28	breast	Primary13	ALIVE (75 MONTHS)	tnbc	P19	high	Ignored	Low
+TMA Slide 2 | 055 | Segment 2	Stroma	Slide2_Patient28	breast	Primary13	ALIVE (75 MONTHS)	tnbc	P19	high	Ignored	Low
+TMA Slide 2 | 056 | Segment 1	Tumor	Slide2_Patient28	breast	Primary13.1	ALIVE (75 MONTHS)	tnbc	P19	high	Ignored	High
+TMA Slide 2 | 056 | Segment 2	Stroma	Slide2_Patient28	breast	Primary13.1	ALIVE (75 MONTHS)	tnbc	P19	high	Ignored	High
+TMA Slide 2 | 058 | Segment 1	Tumor	Slide2_Patient28	breast	Primary13.2	ALIVE (75 MONTHS)	tnbc	P19	low	Inflamed	Low
+TMA Slide 2 | 058 | Segment 2	Stroma	Slide2_Patient28	breast	Primary13.2	ALIVE (75 MONTHS)	tnbc	P19	low	Inflamed	High

@@ -1,0 +1,113 @@
+DSPID	segmentID	type	TNBCtype	AOI	Age	Patient	Tissue	stage 	MetType	AJCCStage	TumorSize	HistologicalGrade	P53	Age2	Survival	TumorType	Label	M2		LN	Core
+DSP-1001660009209-F-A04	Segment 1	Tumor	BL1	52821.01	48	Slide1_Patient1	breast	T2N3aM0.2	Primary1	IIIC	3.5	III	+	48	DEAD (9 MONTHS)	tnbc	P1_B1	low	Excluded	35|35	31
+DSP-1001660009209-F-A05	Segment 2	Stroma	BL1	84226.52	48	Slide1_Patient1	breast	T2N3aM0.2	Primary1	IIIC	3.5	III	+	48	DEAD (9 MONTHS)	tnbc	P1_B1	low	Excluded	35|35	31
+DSP-1001660009209-F-A06	Segment 1	Tumor	BL1	26582.17	34	Slide1_Patient2	breast	T2N1aM0.1	Primary2	IIB	3	III	_	34	ALIVE (82 MONTHS)	tnbc	P2_B1	low	Excluded	2|11	32
+DSP-1001660009209-F-A07	Segment 2	Stroma	BL1	117263.02	34	Slide1_Patient2	breast	T2N1aM0.1	Primary2	IIB	3	III	_	34	ALIVE (82 MONTHS)	tnbc	P2_B1	low	Excluded	2|11	32
+DSP-1001660009209-F-A08	Segment 1	Tumor	BL1	31651.64	34	Slide1_Patient2	breast	T2N1aM0.2	Primary2.1	IIB	3	III	_	34	ALIVE (82 MONTHS)	tnbc	P2_B2	high	Excluded	2|11	32
+DSP-1001660009209-F-A09	Segment 2	Stroma	BL1	108075.62	34	Slide1_Patient2	breast	T2N1aM0.2	Primary2.1	IIB	3	III	_	34	ALIVE (82 MONTHS)	tnbc	P2_B2	high	Excluded	2|11	32
+DSP-1001660009209-F-A10	Segment 1	Tumor	BL1	46982.56	37	Slide1_Patient3	breast	T2N3aM0.3	Primary3	IIIC	2.5	III	+	37	ALIVE (81 MONTHS)	tnbc	P3_B1	high	Excluded	17|19	35
+DSP-1001660009209-F-A11	Segment 2	Stroma	BL1	84130.27	37	Slide1_Patient3	breast	T2N3aM0.3	Primary3	IIIC	2.5	III	+	37	ALIVE (81 MONTHS)	tnbc	P3_B1	high	Excluded	17|19	35
+DSP-1001660009209-F-A12	Segment 1	Tumor	UNS	57793.59	37	Slide1_Patient3	breast	T2N3aM0.4	Primary3.1	IIIC	2.5	III	+	37	ALIVE (81 MONTHS)	tnbc	P3_B2	low	Inflamed	17|19	35
+DSP-1001660009209-F-B01	Segment 2	Stroma	UNS	84585.54	37	Slide1_Patient3	breast	T2N3aM0.4	Primary3.1	IIIC	2.5	III	+	37	ALIVE (81 MONTHS)	tnbc	P3_B2	low	Inflamed	17|19	35
+DSP-1001660009209-F-B02	Segment 1	Tumor	IM	65404.92	58	Slide1_Patient4	breast	T2N3aM0	Primary4	IIIC	3.5	III	+	58	DEAD (9 MONTHS)	er-pr-her+	P4_B1	low	Inflamed	19|22	34
+DSP-1001660009209-F-B03	Segment 2	Stroma	IM	75960.38	58	Slide1_Patient4	breast	T2N3aM0	Primary4	IIIC	3.5	III	+	58	DEAD (9 MONTHS)	er-pr-her+	P4_B1	low	Inflamed	19|22	34
+DSP-1001660009209-F-B04	Segment 1	Tumor	IM	45139.37	58	Slide1_Patient4	breast	T2N3aM0	Primary4.1	IIIC	3.5	III	+	58	DEAD (9 MONTHS)	er-pr-her+	P4_B2	high	Inflamed	19|22	34
+DSP-1001660009209-F-B05	Segment 2	Stroma	IM	65307.72	58	Slide1_Patient4	breast	T2N3aM0	Primary4.1	IIIC	3.5	III	+	58	DEAD (9 MONTHS)	er-pr-her+	P4_B2	high	Inflamed	19|22	34
+DSP-1001660009209-F-B06	Segment 1	Tumor	IM	27265.96	37	Slide1_Patient5	breast	T2N3aM0	Primary5	IIIC	4.5	III	_	37	ALIVE(78 MONTHS)	er-pr-her+	P5_B1	high	Inflamed	22|23	33
+DSP-1001660009209-F-B07	Segment 2	Stroma	IM	111263.16	37	Slide1_Patient5	breast	T2N3aM0	Primary5	IIIC	4.5	III	_	37	ALIVE(78 MONTHS)	er-pr-her+	P5_B1	high	Inflamed	22|23	33
+DSP-1001660009209-F-B08	Segment 1	Tumor	M	26380.88	37	Slide1_Patient5	breast	T2N3aM0	Primary5.1	IIIC	4.5	III	_	37	ALIVE(78 MONTHS)	er-pr-her+	P5_B2	low	Inflamed	22|23	33
+DSP-1001660009209-F-B09	Segment 2	Stroma	M	120898.3	37	Slide1_Patient5	breast	T2N3aM0	Primary5.1	IIIC	4.5	III	_	37	ALIVE(78 MONTHS)	er-pr-her+	P5_B2	low	Inflamed	22|23	33
+DSP-1001660009209-F-B10	Segment 1	Tumor	LAR	58959.23	66	Slide1_Patient6	breast	T2N2aM0.1	Primary6	IIIA	5	III	_	66	ALIVE(75 MONTHS)	tnbc	P6_B1	high	Excluded	4|11	36
+DSP-1001660009209-F-B11	Segment 2	Stroma	LAR	90388.28	66	Slide1_Patient6	breast	T2N2aM0.1	Primary6	IIIA	5	III	_	66	ALIVE(75 MONTHS)	tnbc	P6_B1	high	Excluded	4|11	36
+DSP-1001660009209-F-B12	Segment 1	Tumor	UNS	75736.99	66	Slide1_Patient6	breast	T2N2aM0.2	Primary6.1	IIIA	5	III	_	66	ALIVE(75 MONTHS)	tnbc	P6_B2	high	Excluded	4|11	36
+DSP-1001660009209-F-C01	Segment 2	Stroma	UNS	60570.54	66	Slide1_Patient6	breast	T2N2aM0.2	Primary6.1	IIIA	5	III	_	66	ALIVE(75 MONTHS)	tnbc	P6_B2	high	Excluded	4|11	36
+DSP-1001660009209-F-C02	Segment 1	Tumor	BL1	42654.2	51	Slide1_Patient7	breast	T2N1aM0.3	Primary7	IIB	3	III	_	51	ALIVE(73 MONTHS)	tnbc	P7_B1	low	Excluded	1|16	20
+DSP-1001660009209-F-C03	Segment 2	Stroma	BL1	105233.18	51	Slide1_Patient7	breast	T2N1aM0.3	Primary7	IIB	3	III	_	51	ALIVE(73 MONTHS)	tnbc	P7_B1	low	Excluded	1|16	20
+DSP-1001660009209-F-C04	Segment 1	Tumor	BL1	35857.81	51	Slide1_Patient7	breast	T2N1aM0.4	Primary7.1	IIB	3	III	_	51	ALIVE(73 MONTHS)	tnbc	P7_B2	high	Excluded	1|16	20
+DSP-1001660009209-F-C05	Segment 2	Stroma	BL1	111440.11	51	Slide1_Patient7	breast	T2N1aM0.4	Primary7.1	IIB	3	III	_	51	ALIVE(73 MONTHS)	tnbc	P7_B2	high	Excluded	1|16	20
+DSP-1001660009209-F-C06	Segment 1	Tumor	BL1	37271.66	51	Slide1_Patient7	breast	T2N1aM0.5	Primary7.2	IIB	3	III	_	51	ALIVE(73 MONTHS)	tnbc	P7_B3	high	Excluded	1|16	20
+DSP-1001660009209-F-C07	Segment 2	Stroma	BL1	108746.92	51	Slide1_Patient7	breast	T2N1aM0.5	Primary7.2	IIB	3	III	_	51	ALIVE(73 MONTHS)	tnbc	P7_B3	high	Excluded	1|16	20
+DSP-1001660009209-F-C08	Segment 1	Tumor	BL2	42351.38	41	Slide1_Patient8	breast	er-pr-her+	Primary8	IIIC	3.5	III	_	41	ALIVE(72 MONTHS)	er-pr-her+	P8_B1	high	Excluded	15|21	38
+DSP-1001660009209-F-C09	Segment 2	Stroma	BL2	97039.75	41	Slide1_Patient8	breast	er-pr-her+	Primary8	IIIC	3.5	III	_	41	ALIVE(72 MONTHS)	er-pr-her+	P8_B1	high	Excluded	15|21	38
+DSP-1001660009209-F-C10	Segment 1	Tumor	BL1	33062.93	41	Slide1_Patient8	breast	er-pr-her+	Primary8.1	IIIC	3.5	III	_	41	ALIVE(72 MONTHS)	er-pr-her+	P8_B2	high	Excluded	15|21	38
+DSP-1001660009209-F-C11	Segment 2	Stroma	BL1	113787.72	41	Slide1_Patient8	breast	er-pr-her+	Primary8.1	IIIC	3.5	III	_	41	ALIVE(72 MONTHS)	er-pr-her+	P8_B2	high	Excluded	15|21	38
+DSP-1001660009209-F-C12	Segment 1	Tumor	LAR	48123.05	56	Slide1_Patient9	breast	er-pr-her+	Primary 9	IIIA	6	II	+	56	ALIVE(72 MONTHS)	er-pr-her+	P9_B1	high	Inflamed	5|13	39
+DSP-1001660009209-F-D01	Segment 2	Stroma	LAR	99858.81	56	Slide1_Patient9	breast	er-pr-her+	Primary 9	IIIA	6	II	+	56	ALIVE(72 MONTHS)	er-pr-her+	P9_B1	high	Inflamed	5|13	39
+DSP-1001660009209-F-D02	Segment 1	Tumor	LAR	50770.93	56	Slide1_Patient9	breast	er-pr-her+	Primary9.1	IIIA	6	II	+	56	ALIVE(72 MONTHS)	er-pr-her+	P9_B2	high	Excluded	5|13	39
+DSP-1001660009209-F-D03	Segment 2	Stroma	LAR	96630.28	56	Slide1_Patient9	breast	er-pr-her+	Primary9.1	IIIA	6	II	+	56	ALIVE(72 MONTHS)	er-pr-her+	P9_B2	high	Excluded	5|13	39
+DSP-1001660009209-F-D04	Segment 1	Tumor	IM	24190.2	47	Slide1_Patient10	breast	T3N3aM0.1	Primary10	IIIC	10	II	+	47	DEAD(33 MONTHS)	tnbc	P10_B1	low	Inflamed	11|13	40
+DSP-1001660009209-F-D05	Segment 2	Stroma	IM	126194.05	47	Slide1_Patient10	breast	T3N3aM0.1	Primary10	IIIC	10	II	+	47	DEAD(33 MONTHS)	tnbc	P10_B1	low	Inflamed	11|13	40
+DSP-1001660009209-F-D06	Segment 1	Tumor	UNS	43390.35	47	Slide1_Patient10	breast	T3N3aM0.2	Primary10.1	IIIC	10	II	+	47	DEAD(33 MONTHS)	tnbc	P10_B2	low	Excluded	11|13	40
+DSP-1001660009209-F-D07	Segment 2	Stroma	UNS	100921	47	Slide1_Patient10	breast	T3N3aM0.2	Primary10.1	IIIC	10	II	+	47	DEAD(33 MONTHS)	tnbc	P10_B2	low	Excluded	11|13	40
+DSP-1001660009209-F-D08	Segment 1	Tumor	BL2	29375.13	48	Slide1_Patient1	LN	T2N3aM0	LN1	IIIC	3.5	III	+	48	DEAD (9 MONTHS)	tnbc	P1_L1	low	Excluded	35|35	41
+DSP-1001660009209-F-D09	Segment 2	Stroma	BL2	98879.09	48	Slide1_Patient1	LN	T2N3aM0	LN1	IIIC	3.5	III	+	48	DEAD (9 MONTHS)	tnbc	P1_L1	low	Excluded	35|35	41
+DSP-1001660009209-F-D10	Segment 1	Tumor	BL2	16907.47	48	Slide1_Patient1	LN	T2N3aM1	LN1.1	IIIC	3.5	III	+	48	DEAD (9 MONTHS)	tnbc	P1_L2	high	Excluded	35|35	41
+DSP-1001660009209-F-D11	Segment 2	Stroma	BL2	135002.57	48	Slide1_Patient1	LN	T2N3aM1	LN1.1	IIIC	3.5	III	+	48	DEAD (9 MONTHS)	tnbc	P1_L2	high	Excluded	35|35	41
+DSP-1001660009209-F-D12	Segment 1	Tumor	LAR	70190.63	34	Slide1_Patient2	LN	T2N1aM0.1	LN2	IIB	3	III	_	34	ALIVE (82 MONTHS)	tnbc	P2_L1	low	Ignored	2|11	42
+DSP-1001660009209-F-E01	Segment 2	Stroma	LAR	81053.07	34	Slide1_Patient2	LN	T2N1aM0.1	LN2	IIB	3	III	_	34	ALIVE (82 MONTHS)	tnbc	P2_L1	low	Ignored	2|11	42
+DSP-1001660009209-F-E02	Segment 1	Tumor	LAR	47066.31	34	Slide1_Patient2	LN	T2N1aM0.2	LN2.1	IIB	3	III	_	34	ALIVE (82 MONTHS)	tnbc	P2_L2	low	Excluded	2|11	42
+DSP-1001660009209-F-E03	Segment 2	Stroma	LAR	105879.18	34	Slide1_Patient2	LN	T2N1aM0.2	LN2.1	IIB	3	III	_	34	ALIVE (82 MONTHS)	tnbc	P2_L2	low	Excluded	2|11	42
+DSP-1001660009209-F-E04	Segment 1	Tumor	IM	22417.8	37	Slide1_Patient3	LN	T2N3aM0.3	LN3	IIB	3	III	_	37	ALIVE (82 MONTHS)	tnbc	P3_L1	low	Excluded	17|19	43
+DSP-1001660009209-F-E05	Segment 2	Stroma	IM	110612.52	37	Slide1_Patient3	LN	T2N3aM0.3	LN3	IIB	3	III	_	37	ALIVE (82 MONTHS)	tnbc	P3_L1	low	Excluded	17|19	43
+DSP-1001660009209-F-E06	Segment 1	Tumor	IM	19757.27	37	Slide1_Patient3	LN	T2N3aM0.4	LN3.1	IIB	3	III	_	37	ALIVE (82 MONTHS)	tnbc	P3_L2	low	Inflamed	17|19	43
+DSP-1001660009209-F-E07	Segment 2	Stroma	IM	105179.86	37	Slide1_Patient3	LN	T2N3aM0.4	LN3.1	IIB	3	III	_	37	ALIVE (82 MONTHS)	tnbc	P3_L2	low	Inflamed	17|19	43
+DSP-1001660009209-F-E08	Segment 1	Tumor	IM	27669.82	58	Slide1_Patient4	LN	T2N3aM0	LN4	IIIC	3.5	III	+	58	DEAD (9 MONTHS)	er-pr-her+	P4_L1	low	Excluded	19|22	44
+DSP-1001660009209-F-E09	Segment 2	Stroma	IM	103063.64	58	Slide1_Patient4	LN	T2N3aM0	LN4	IIIC	3.5	III	+	58	DEAD (9 MONTHS)	er-pr-her+	P4_L1	low	Excluded	19|22	44
+DSP-1001660009209-F-E10	Segment 1	Tumor	IM	38269.64	58	Slide1_Patient4	LN	T2N3aM0	LN4.1	IIIC	3.5	III	+	58	DEAD (9 MONTHS)	er-pr-her+	P4_L2	low	Excluded	19|22	44
+DSP-1001660009209-F-E11	Segment 2	Stroma	IM	83039.74	58	Slide1_Patient4	LN	T2N3aM0	LN4.1	IIIC	3.5	III	+	58	DEAD (9 MONTHS)	er-pr-her+	P4_L2	low	Excluded	19|22	44
+DSP-1001660009209-F-E12	Segment 1	Tumor	UNS	30135.46	37	Slide1_Patient5	LN	T2N3aM0	LN5	IIIC	4.5	III	_	37	ALIVE(78 MONTHS)	er-pr-her+	P5_L1	high	Excluded	22|23	45
+DSP-1001660009209-F-F01	Segment 2	Stroma	UNS	115461.48	37	Slide1_Patient5	LN	T2N3aM0	LN5	IIIC	4.5	III	_	37	ALIVE(78 MONTHS)	er-pr-her+	P5_L1	high	Excluded	22|23	45
+DSP-1001660009209-F-F02	Segment 1	Tumor	UNS	25524.94	37	Slide1_Patient5	LN	T2N3aM0	LN5.1	IIIC	4.5	III	_	37	ALIVE(78 MONTHS)	er-pr-her+	P5_L2	high	Excluded	22|23	45
+DSP-1001660009209-F-F03	Segment 2	Stroma	UNS	121540.94	37	Slide1_Patient5	LN	T2N3aM0	LN5.1	IIIC	4.5	III	_	37	ALIVE(78 MONTHS)	er-pr-her+	P5_L2	high	Excluded	22|23	45
+DSP-1001660009209-F-F04	Segment 1	Tumor	UNS	29586.35	66	Slide1_Patient6	LN	T2N2aM0.1	LN6	IIIA	5	III	_	66	ALIVE(75 MONTHS)	tnbc	P6_L1	high	Excluded	4|11	46
+DSP-1001660009209-F-F05	Segment 2	Stroma	UNS	99797.16	66	Slide1_Patient6	LN	T2N2aM0.1	LN6	IIIA	5	III	_	66	ALIVE(75 MONTHS)	tnbc	P6_L1	high	Excluded	4|11	46
+DSP-1001660009209-F-F06	Segment 1	Tumor	UNS	33680.1	66	Slide1_Patient6	LN	T2N2aM0.2	LN6.1	IIIA	5	III	_	66	ALIVE(75 MONTHS)	tnbc	P6_L2	high	Excluded	4|11	46
+DSP-1001660009209-F-F07	Segment 2	Stroma	UNS	109783.97	66	Slide1_Patient6	LN	T2N2aM0.2	LN6.1	IIIA	5	III	_	66	ALIVE(75 MONTHS)	tnbc	P6_L2	high	Excluded	4|11	46
+DSP-1001660009209-F-F08	Segment 1	Tumor	MSL	20319.52	51	Slide1_Patient7	LN	T2N1aM0.3	LN7	IIB	3	III	_	51	ALIVE(73 MONTHS)	tnbc	P7_L1	low	Ignored	1|16	47
+DSP-1001660009209-F-F09	Segment 2	Stroma	MSL	132580.97	51	Slide1_Patient7	LN	T2N1aM0.3	LN7	IIB	3	III	_	51	ALIVE(73 MONTHS)	tnbc	P7_L1	low	Ignored	1|16	47
+DSP-1001660009209-F-F10	Segment 1	Tumor	MSL	9386.13	51	Slide1_Patient7	LN	T2N1aM0.3	LN7	IIB	3	III	_	51	ALIVE(73 MONTHS)	tnbc	P7_L2	low	Ignored	1|16	47
+DSP-1001660009209-F-F11	Segment 2	Stroma	MSL	148479.09	51	Slide1_Patient7	LN	T2N1aM0.3	LN7	IIB	3	III	_	51	ALIVE(73 MONTHS)	tnbc	P7_L2	low	Ignored	1|16	47
+DSP-1001660009209-F-F12	Segment 1	Tumor	UNS	63092.38	41	Slide1_Patient8	LN	T2N3aM0	LN8	IIIC	3.5	III	_	41	ALIVE(72 MONTHS)	er-pr-her+	P8_L1	high	Ignored	15|21	48
+DSP-1001660009209-F-G01	Segment 2	Stroma	UNS	87858.27	41	Slide1_Patient8	LN	T2N3aM0	LN8	IIIC	3.5	III	_	41	ALIVE(72 MONTHS)	er-pr-her+	P8_L1	high	Ignored	15|21	48
+DSP-1001660009209-F-G02	Segment 1	Tumor	LAR	46373.23	41	Slide1_Patient8	LN	T2N3aM0	LN8.1	IIIC	3.5	III	_	41	ALIVE(72 MONTHS)	er-pr-her+	P8_L2	low	Excluded	15|21	48
+DSP-1001660009209-F-G03	Segment 2	Stroma	LAR	105496.61	41	Slide1_Patient8	LN	T2N3aM0	LN8.1	IIIC	3.5	III	_	41	ALIVE(72 MONTHS)	er-pr-her+	P8_L2	low	Excluded	15|21	48
+DSP-1001660009209-F-G04	Segment 1	Tumor	LAR	73299.7	56	Slide1_Patient9	LN	T3N2aM0	LN9	IIIA	6	II	+	56	ALIVE(72 MONTHS)	er-pr-her+	P9_L1	high	Ignored	5|13	49
+DSP-1001660009209-F-G05	Segment 2	Stroma	LAR	70998.04	56	Slide1_Patient9	LN	T3N2aM0	LN9	IIIA	6	II	+	56	ALIVE(72 MONTHS)	er-pr-her+	P9_L1	high	Ignored	5|13	49
+DSP-1001660009209-F-G06	Segment 1	Tumor	UNS	52976.82	47	Slide1_Patient10	LN	T3N3aM0.1	LN10	IIIC	10	II	+	47	DEAD(33 MONTHS)	tnbc	P10_L1	low	Excluded	11|13	50
+DSP-1001660009209-F-G07	Segment 2	Stroma	UNS	99019.53	47	Slide1_Patient10	LN	T3N3aM0.1	LN10	IIIC	10	II	+	47	DEAD(33 MONTHS)	tnbc	P10_L1	low	Excluded	11|13	50
+DSP-1001660009209-F-G08	Segment 1	Tumor	UNS	42613.69	47	Slide1_Patient10	LN	T3N3aM0.2	LN10.1	IIIC	10	II	+	47	DEAD(33 MONTHS)	tnbc	P10_L2	high	Excluded	11|13	50
+DSP-1001660009209-F-G09	Segment 2	Stroma	UNS	111005.65	47	Slide1_Patient10	LN	T3N3aM0.2	LN10.1	IIIC	10	II	+	47	DEAD(33 MONTHS)	tnbc	P10_L2	high	Excluded	11|13	50
+DSP-1001660009210-G-A11	Segment 1	Tumor	UNS	74569.75	37	Slide2_Patient5	breast	T2N0M0.1	Nonmetas1	IIA	2.5	III	-	37	ALIVE (84 MONTHS)	tnbc	P11_B1	high	Excluded	0|20	5
+DSP-1001660009210-G-A12	Segment 2	Stroma	UNS	66843.44	37	Slide2_Patient5	breast	T2N0M0.1	Nonmetas1	IIA	2.5	III	-	37	ALIVE (84 MONTHS)	tnbc	P11_B1	high	Excluded	0|20	5
+DSP-1001660009210-G-B01	Segment 1	Tumor	MSL	8878.02	37	Slide2_Patient5	breast	T2N0M0.1	Nonmetas1.1	IIA	2.5	III	-	37	ALIVE (84 MONTHS)	tnbc	P12_B2	low	Excluded	0|20	5
+DSP-1001660009210-G-B02	Segment 2	Stroma	MSL	148014.69	37	Slide2_Patient5	breast	T2N0M0.1	Nonmetas1.1	IIA	2.5	III	-	37	ALIVE (84 MONTHS)	tnbc	P12_B2	low	Excluded	0|20	5
+DSP-1001660009210-G-B11	Segment 1	Tumor	UNS	57856.69	36	Slide2_Patient8	breast	T3N0M0.1	Nonmetas2	IIB	6	II	-	36	ALIVE (82 MONTHS)	tnbc	P13_B1	low	Ignored	0|14	8
+DSP-1001660009210-G-B12	Segment 2	Stroma	UNS	88899.81	36	Slide2_Patient8	breast	T3N0M0.1	Nonmetas2	IIB	6	II	-	36	ALIVE (82 MONTHS)	tnbc	P13_B1	low	Ignored	0|14	8
+DSP-1001660009210-G-C01	Segment 1	Tumor	UNS	70710.44	36	Slide2_Patient8	breast	T3N0M0.2	Nonmetas2.1	IIB	6	II	-	36	ALIVE (82 MONTHS)	tnbc	P13_B2	low	Ignored	0|14	8
+DSP-1001660009210-G-C02	Segment 2	Stroma	UNS	74843.58	36	Slide2_Patient8	breast	T3N0M0.2	Nonmetas2.1	IIB	6	II	-	36	ALIVE (82 MONTHS)	tnbc	P13_B2	low	Ignored	0|14	8
+DSP-1001660009210-G-C03	Segment 1	Tumor	MSL	31970.31	52	Slide2_Patient9	breast	T2N2aM0.3	Primary11	IIIA	2.5	III	+	52	ALIVE (82 MONTHS)	tnbc	P14_B1	high	Excluded	5|24	9
+DSP-1001660009210-G-C04	Segment 2	Stroma	MSL	117445.9	52	Slide2_Patient9	breast	T2N2aM0.3	Primary11	IIIA	2.5	III	+	52	ALIVE (82 MONTHS)	tnbc	P14_B1	high	Excluded	5|24	9
+DSP-1001660009210-G-C05	Segment 1	Tumor	UNS	61659.47	52	Slide2_Patient9	breast	T2N2aM0.4	Primary11.1	IIIA	2.5	III	+	52	ALIVE (82 MONTHS)	tnbc	P14_B2	high	Excluded	5|24	9
+DSP-1001660009210-G-C06	Segment 2	Stroma	UNS	86937.96	52	Slide2_Patient9	breast	T2N2aM0.4	Primary11.1	IIIA	2.5	III	+	52	ALIVE (82 MONTHS)	tnbc	P14_B2	high	Excluded	5|24	9
+DSP-1001660009210-G-C07	Segment 1	Tumor	LAR	40472.97	40	Slide2_Patient10	breast	T2N0M0.3	Nonmetas3	IIA	4.5	III	+	40	ALIVE (82 MONTHS)	tnbc	P15_B1	high	Excluded	0|11	10
+DSP-1001660009210-G-C08	Segment 2	Stroma	LAR	110797.64	40	Slide2_Patient10	breast	T2N0M0.3	Nonmetas3	IIA	4.5	III	+	40	ALIVE (82 MONTHS)	tnbc	P15_B1	high	Excluded	0|11	10
+DSP-1001660009210-G-C09	Segment 1	Tumor	MSL	74330.82	40	Slide2_Patient10	breast	T2N0M0.4	Nonmetas3.1	IIA	4.5	III	+	40	ALIVE (82 MONTHS)	tnbc	P15_B2	high	Excluded	0|11	10
+DSP-1001660009210-G-C10	Segment 2	Stroma	MSL	77559.83	40	Slide2_Patient10	breast	T2N0M0.4	Nonmetas3.1	IIA	4.5	III	+	40	ALIVE (82 MONTHS)	tnbc	P15_B2	high	Excluded	0|11	10
+DSP-1001660009210-G-D05	Segment 1	Tumor	MSL	58767.55	60	Slide2_Patient13	breast	T2N0M0.5	Nonmetas4	IIA	2.5	III	+	60	ALIVE (79 MONTHS)	tnbc	P16_B1	low	Ignored	0|16	13
+DSP-1001660009210-G-D06	Segment 2	Stroma	MSL	85941.75	60	Slide2_Patient13	breast	T2N0M0.5	Nonmetas4	IIA	2.5	III	+	60	ALIVE (79 MONTHS)	tnbc	P16_B1	low	Ignored	0|16	13
+DSP-1001660009210-G-D07	Segment 1	Tumor	LAR	21116.84	60	Slide2_Patient13	breast	T2N0M0.6	Nonmetas4.1	IIA	2.5	III	+	60	ALIVE (79 MONTHS)	tnbc	P16_B2	high	Excluded	0|16	13
+DSP-1001660009210-G-D08	Segment 2	Stroma	LAR	129332.42	60	Slide2_Patient13	breast	T2N0M0.6	Nonmetas4.1	IIA	2.5	III	+	60	ALIVE (79 MONTHS)	tnbc	P16_B2	high	Excluded	0|16	13
+DSP-1001660009210-G-F07	Segment 1	Tumor	LAR	93722.18	40	Slide2_Patient19	breast	T3N0M0.3	Nonmetas5	IIB	5.5	III	+	40	ALIVE (77 MONTHS)	tnbc	P17_B2	high	Excluded	0|10	19
+DSP-1001660009210-G-F08	Segment 2	Stroma	LAR	61701.11	40	Slide2_Patient19	breast	T3N0M0.3	Nonmetas5	IIB	5.5	III	+	40	ALIVE (77 MONTHS)	tnbc	P17_B2	high	Excluded	0|10	19
+DSP-1001660009210-G-G03	Segment 1	Tumor	MSL	79646.75	45	Slide2_Patient22	breast	T2N0M0.7	Nonmetas6	IIA	3.5	UK	_	45	ALIVE (77 MONTHS)	tnbc	P18_B1	high	Excluded	0|17	22
+DSP-1001660009210-G-G04	Segment 2	Stroma	MSL	68431.04	45	Slide2_Patient22	breast	T2N0M0.7	Nonmetas6	IIA	3.5	UK	_	45	ALIVE (77 MONTHS)	tnbc	P18_B1	high	Excluded	0|17	22
+DSP-1001660009210-G-G05	Segment 1	Tumor	MSL	87052.3	45	Slide2_Patient22	breast	T2N0M0.8	Nonmetas6.1	IIA	3.5	UK	_	45	ALIVE (77 MONTHS)	tnbc	P18_B2	low	Excluded	0|17	22
+DSP-1001660009210-G-G06	Segment 2	Stroma	MSL	55152.45	45	Slide2_Patient22	breast	T2N0M0.8	Nonmetas6.1	IIA	3.5	UK	_	45	ALIVE (77 MONTHS)	tnbc	P18_B2	low	Excluded	0|17	22
+DSP-1001660009211-H-A04	Segment 1	Tumor	LAR	46921.38	52	Slide2_Patient28	breast	T2N1aM0.5	Primary13	IIB	5	II	_	52	ALIVE (75 MONTHS)	tnbc	P19_B1	high	Ignored	1|22	29
+DSP-1001660009211-H-A05	Segment 2	Stroma	LAR	102993.82	52	Slide2_Patient28	breast	T2N1aM0.5	Primary13	IIB	5	II	_	52	ALIVE (75 MONTHS)	tnbc	P19_B1	high	Ignored	1|22	29
+DSP-1001660009211-H-A06	Segment 1	Tumor	LAR	49053.13	52	Slide2_Patient28	breast	T2N1aM0.6	Primary13.1	IIB	5	II	_	52	ALIVE (75 MONTHS)	tnbc	P19_B2	high	Ignored	1|22	29
+DSP-1001660009211-H-A07	Segment 2	Stroma	LAR	101678.61	52	Slide2_Patient28	breast	T2N1aM0.6	Primary13.1	IIB	5	II	_	52	ALIVE (75 MONTHS)	tnbc	P19_B2	high	Ignored	1|22	29
+DSP-1001660009211-H-A08	Segment 1	Tumor	UNS	40650.4	52	Slide2_Patient28	breast	T2N1aM0.7	Primary13.2	IIB	5	II	_	52	ALIVE (75 MONTHS)	tnbc	P19_B3	low	Inflamed	1|22	29
+DSP-1001660009211-H-A09	Segment 2	Stroma	UNS	97486.69	52	Slide2_Patient28	breast	T2N1aM0.7	Primary13.2	IIB	5	II	_	52	ALIVE (75 MONTHS)	tnbc	P19_B3	low	Inflamed	1|22	29
+DSP-1001660009210-G-F09	Segment 1	Tumor	BL2	70514.91	51	Slide2_Patient20	breast	T2N1aM0.4	Primary12	IIB	2.5	UK	-	51	ALIVE(77 MONTHS)	tnbc	P20_B1	high	Excluded	3|16	37
+DSP-1001660009210-G-F10	Segment 2	Stroma	BL2	78079.96	51	Slide2_Patient20	breast	T2N1aM0.4	Primary12	IIB	2.5	UK	-	51	ALIVE(77 MONTHS)	tnbc	P20_B1	high	Excluded	3|16	37
