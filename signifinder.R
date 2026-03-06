@@ -1,6 +1,6 @@
 
 library(signifinder)
-mtx <- read.table("./Data/TPMnormalized.txt", sep = "\t", header = T)
+mtx <- read.table("TPMnormalized.txt", sep = "\t", header = T)
 head(mtx)
 rownames(mtx) <- mtx$X
 mtx$X <- NULL
