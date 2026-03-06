@@ -8,17 +8,11 @@ head(TNBC)
 TNBC$DSPID
 TNBC$AOI <- gsub("\\..*", "", TNBC$AOI)
 ####summary of clinical factors
-
-
-######
 all <- read.table("./TNBCmetaData.txt", sep = "\t", header = T) 
 head(all)
 all$AOISurfaceArea <- gsub("\\..*", "", all$AOISurfaceArea)
-
 sel <- all[,c("SegmentDisplayName","AOISurfaceArea")]
-
 mergedDF <- merge(sel, TNBC, by.x = "AOISurfaceArea", by.y = "AOI")
-
 rownames(mergedDF) <- mergedDF$SegmentDisplayName
 
 ###only tumor 
@@ -42,8 +36,6 @@ coldata <- countFile[,mergedDF$SegmentDisplayName]
 all(rownames(mergedDF) %in% colnames(coldata))
 all(rownames(mergedDF) == colnames(coldata))
 
-
-##input 
 dds <- DESeqDataSetFromMatrix(countData = coldata,
                               colData = mergedDF,
                               design = ~ MetType) ##type ##Tissue##TumorType ##MetType
@@ -60,22 +52,13 @@ dds$Tissue <- factor(dds$Tissue, levels = c("LN","breast"))
 #dds$TumorType <- factor(dds$TumorType, levels = c("er-pr-her+","tnbc"))
 ###Differential expresion analysis
 dds <- DESeq(dds)
-#res <- results(dds, contrast=c("type","Tumor","Stroma"))
-#res <- results(dds, contrast=c("TumorType","er-pr-her+","tnbc"))
 res <- results(dds, contrast=c("MetType","Nonmetas","Primary"))
-res <- results(dds, contrast=c("Tissue","LN","breast"))
-res
-
 resOrdered <- res[order(res$pvalue),]
 sigset <- subset(resOrdered, pvalue < 0.05)
 sigset[sigset$log2FoldChange<0,]
-
 resSig <- subset(resOrdered, padj < 0.05)
 resSig
 #write.csv(as.data.frame(resSig), file="Tumor_vs_Stroma_results.csv")
-###gene plot 
-
-plotCounts(dds, gene="ATRX", intgroup="Tissue")
 
 ###heatmap
 ntd <- normTransform(dds)
@@ -84,18 +67,11 @@ select <- order(rowMeans(counts(dds,normalized=TRUE)),
                 decreasing=TRUE)[1:20]
 ###top 200 DEGs
 sel <- rownames(resOrdered[1:50,])
-#sel <- rownames(resSig)
-#
-#sel <- read.table("PAM50GeneList.txt", sep = "\t", header = F)
-sel <- read.table("Interferon_marker.txt", sep = "\t", header = F)
-sel$V1 <- unique(sel$V1)
-
 ###annotation
 df <- as.data.frame(colData(dds)[,c("MetType","Label","type","TumorType")])  ###,"TNBCtype.x")])
 as.data.frame(colData(dds)[,c("MetType","Label","TumorType")])
 
 df$type <- NULL
-#df <- df[order(df$type),]
 df$MetType <- sub("\\..*","", df$MetType)
 df$MetType <- gsub('[0-9]+', '', df$MetType)
 df$MetType <- gsub(' ', '', df$MetType)
@@ -107,17 +83,7 @@ df <- df[order(df$MetType),]
 
 ##order annotation
 sel %in% rownames(assay(ntd))
-#sel$V1 %in% rownames(assay(ntd))
-#sel_fil <- sel[sel$V1 %in% rownames(assay(ntd)),]
-#sel$V1
-#sel_fil <- sel[sel$V1!="CD95L",] ##for Tcell
-#sel_fil <- sel[!sel$V1 %in% c("AL2","CLB54"),] ##for HIF
-sel <- c("ATRX")
-
-sel_uni <- unique(sel_fil)
-mtx <- assay(ntd)[sel_uni,]
 mtx <- assay(ntd)[sel,]
-#mtx <- assay(ntd)[sel$V1,]
 mtx <- mtx[,rownames(df)]
 
 ##change annotation color 
@@ -141,13 +107,8 @@ pheatmap(mtx, cluster_rows=T, show_rownames=T,
          annotation_col=df,
          annotation_colors = ann_col)
 
-dev.off()
+#dev.off()
 
-pheatmap(mtx, cluster_rows=T, show_rownames=T,
-         show_colnames=FALSE, cluster_cols=F, fontsize_row = 8,
-         annotation_col=df,
-         annotation_colors = ann_col)
-###
 library("RColorBrewer")
 vsd <- vst(dds, blind=FALSE)
 sampleDists <- dist(t(assay(vsd)))
@@ -156,18 +117,8 @@ rownames(sampleDistMatrix) <- paste(vsd$type, vsd$MetType, sep="-")
 colnames(sampleDistMatrix) <- NULL
 colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
 
-##only tumor
-
-pheatmap(sampleDistMatrix,
-         clustering_distance_rows=sampleDists,
-         clustering_distance_cols=sampleDists,
-         col=colors)
-
 ###PCA
 colors <- colorRampPalette( rev(brewer.pal(9, "Blues")) )(255)
-
-plotPCA(vsd, intgroup=c("TNBCtype"))
-
 pcaData <- plotPCA(vsd, intgroup=c("MetType","Patient","TumorType","TNBCtype"), returnData=TRUE)
 
 pcaData$MetType <- sub("\\..*","", pcaData$MetType)
@@ -201,9 +152,7 @@ pcaData <- pcaData %>%
            pcaData$Patient=="Slide2_Patient28" ~ "P19"
          ))
 
-pcaData$PLabel
-
-pdf("./Figures/Deseq2_PCA.pdf",width = 12, height = 10)
+#pdf("./Figures/Deseq2_PCA.pdf",width = 12, height = 10)
 
 ggplot(pcaData, aes(PC1, PC2, color=PLabel, shape = TumorType)) +
   geom_point(size=3,aes(shape=factor(TumorType))) +
@@ -231,8 +180,7 @@ ggplot(pcaData, aes(PC1, PC2, color=PLabel, shape = TumorType)) +
                                 P19="hotpink2",P20="gold2")
   )
 
-dev.off()
-
+#dev.off()
 
 ##################################volcano plot 
 ##organize dataframe
@@ -253,10 +201,6 @@ up <- rownames(out[out$Diffexpressed=="Up", ])[1:20]
 down <- rownames(out[out$Diffexpressed=="Down", ])[1:20]
 
 ##label name
-delabel<- c("CLDN4","CLDN7","ERBB3","CDH1","SPINT2","TFAP2A","PTPRF","MUC1","TACSTD2","F11R","KRT8","DSP","FOXA1","CD24",
-"GATA3","MAL2","PERP","TFF3","LTF",
-"BGN","COL1A2","IGFBP7","POSTN","COL3A1","AEBP1","IGHG3","LAPTM5","IGKC","IGHA1","MMP2","SPARC","COL5A1","APOE",
-"A2M","C1QC","CD68","FN1","FBN1","VIM","CCL2","CXCL9","SPP1")
 
 delabel<- c("CHST1","CISD3","AGR2","MLLT6","PIP4K2B","ANKRD17","LASP1","PSCA","PCGF2","TBC1D3C","JPT1",
             "PSMB3","RPL23","LLGL2", "CANX","APOD","H3C13","PSMD3","TFF3", "MUCL1","LTF",
@@ -267,7 +211,6 @@ delabel<- c(up,down)
 legend_title<-""
 #out$delabel[out$diffexpressed != "NO"] <- out$SYMBOL[out$diffexpressed != "NO"]
 library(ggrepel)
-pdf("./Figures/NonmetvsPrimary_volcanoplot.pdf", width = 9, height = 6)
 #pdf("./Figures/TumorvsStroma_volcanoplot.pdf", width = 9, height = 6)
 ggplot(data=out, aes(x=log2FoldChange, y=-log10(pvalue), col=Diffexpressed)) +
   geom_point() +
@@ -297,8 +240,7 @@ ggplot(data=out, aes(x=log2FoldChange, y=-log10(pvalue), col=Diffexpressed)) +
     legend.title = element_text(size=13),
     legend.position = c(0.9,0.90))
 
-
-dev.off()
+#dev.off()
 #####################################GSEA
 #prepare the list for fgsea
 res$SYMBOL <- rownames(res)
@@ -309,23 +251,19 @@ res2 <- res %>%
   distinct() %>% 
   group_by(SYMBOL) %>% 
   summarize(stat=mean(stat))
-res2
 
-#devtools::install_github("ctlab/fgsea")
 library(fgsea)
 ranks <- deframe(res2)
 head(ranks, 20)
 
 #########################################
 #look at KEGG pathways:
-pathways.kegg <- gmtPathways("../msigdb_v2024.1.Hs_files_to_download_locally/msigdb_v2024.1.Hs_GMTs/c2.cp.kegg_legacy.v2024.1.Hs.symbols.gmt")
+pathways.kegg <- gmtPathways("c2.cp.kegg_legacy.v2024.1.Hs.symbols.gmt")
 
 fgseaResT <- fgsea(pathways=pathways.kegg, stats=ranks)
 head(fgseaResT[order(pval), ])
 
 sum(fgseaResT[, pval < 0.05])
-
-#fwrite(fgseaResT, file="CR_vs_ICR_fgseaRes_kegg.txt", sep="\t", sep2=c("", " ", ""))
 
 #plot the GSEA results
 
@@ -359,29 +297,6 @@ df_for_lollipop_plot <- subset(df_for_lollipop_plot, pval < 0.05)
 # df_for_lollipop_plot<-df_for_lollipop_plot[(df_for_lollipop_plot$pval < 0.1)]
 df_for_lollipop_plot$Pathway
 #######filter some pathway
-#fil_lst <- c("asthma", "allograft_rejection","graft_versus_host_disease",
-#             "type_i_diabetes_mellitus", "autoimmune_thyroid_disease","asthma", "viral_myocarditis",
-#             "non_small_cell_lung_cancer", "pancreatic_cancer","acute_myeloid_leukemia"). ## for UNS
-
-fil_lst <- c("small_cell_lung_cancer", "prion_diseases","bladder_cancer",
-             "glioma", "leishmania_infection","prostate_cancer", "arrhythmogenic_right_ventricular_cardiomyopathy_arvc",
-             "chronic_myeloid_leukemia", "pathways_in_cancer","endometrial_cancer",
-             "thyroid_cancer","pathogenic_escherichia_coli_infection") ## for LAR
-
-fil_lst <- c("small_cell_lung_cancer", "prion_diseases","bladder_cancer","pathogenic_escherichia_coli_infection",
-             "glioma", "thyroid_cancer","non_small_cell_lung_cancer","acute_myeloid_leukemia",
-             "pancreatic_cancer","chronic_myeloid_leukemia","type_i_diabetes_mellitus","asthma",
-             "leishmania_infection","prostate_cancer", "arrhythmogenic_right_ventricular_cardiomyopathy_arvc",
-             "chronic_myeloid_leukemia", "pathways_in_cancer","endometrial_cancer",
-             "thyroid_cancer","pathogenic_escherichia_coli_infection") ## for BL
-
-fil_lst <- c("asthma", "allograft_rejection","autoimmune_thyroid_disease",
-             "type_i_diabetes_mellitus", "viral_myocarditis","graft_versus_host_disease", 
-             "leishmania_infection","parkinsons_disease",
-             "huntingtons_disease", "small_cell_lung_cancer","non_small_cell_lung_cancer",
-             "prion_diseases","chronic_myeloid_leukemia","pancreatic_cancer",
-             "endometrial_cancer","alzheimers_disease") ## for IM
-
 fil_lst <- c("asthma", "allograft_rejection","autoimmune_thyroid_disease","ribosome",
              "type_i_diabetes_mellitus", "viral_myocarditis","graft_versus_host_disease", 
              "leishmania_infection","parkinsons_disease","glioma","pathways_in_cancer",
@@ -425,10 +340,7 @@ p1<-ggplot(df_for_lollipop_plot, aes(x=Pathway, y=NES, label=NES)) +
 
 p1
 
-#pdf("./Figures/LNvsPrimary_GSEA.pdf", width=10, height=7)
-pdf("./Figures/NonMetvsprimary.pdf", width=10, height=10)
-p1
-dev.off()
+
 
 
 
